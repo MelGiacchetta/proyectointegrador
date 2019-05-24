@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background: black;
+  font-family: monospace;
+  margin: 0px;
+}
+header {
+  background: white;
+  margin: 0px;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+div.contenedor {
+  color: black;
+  position: fixed;
+    top: 0;
+    background-color: white;
+    padding-top: 14px;
+  overflow: hidden;
+
+  margin: 0 auto;
+}
+.logo {
+  border-radius: 250px;
+  height: 70px;
+}
+.nombres {
+  list-style: none;
+  font-size: 8px;
+}
+.primero {
+  float: left;
+}
+.tercero {
+float: left;
+font-size: 30px;
+margin-top: -30px;
+margin-left: 25px;
+}
+.cuarto {
+float: left;
+margin-left: -170px;
+margin-top: 27px;
+}
+.quinto {
+float: left;
+}
+.sexto {
+float: left;
+}
+.septimo {
+float: left;
+}
+.octavo {
+float: left;
+}
