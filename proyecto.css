@@ -26,7 +26,7 @@ div.contenedor {
 }
 .logo {
   border-radius: 250px;
-  height: 70px;
+  height: 53px;
 }
 .nombres {
   list-style: none;
@@ -37,7 +37,7 @@ div.contenedor {
 }
 .bienvenido {
 float: left;
-font-size: 30px;
+font-size: 25px;
 margin-top: -30px;
 margin-left: 25px;
 }
@@ -48,10 +48,15 @@ margin-top: 27px;
 }
 .buscador {
 float: left;
+margin-left: 66px;
 }
 .usuario {
 float: left;
 }
 .registro {
 float: left;
+}
+
+#Buscador {
+  display: none;
 }
