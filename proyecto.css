@@ -32,29 +32,26 @@ div.contenedor {
   list-style: none;
   font-size: 8px;
 }
-.primero {
+.ellogo {
   float: left;
 }
-.tercero {
+.bienvenido {
 float: left;
 font-size: 30px;
 margin-top: -30px;
 margin-left: 25px;
 }
-.cuarto {
+.pelispreferidas {
 float: left;
 margin-left: -170px;
 margin-top: 27px;
 }
-.quinto {
+.buscador {
 float: left;
 }
-.sexto {
+.usuario {
 float: left;
 }
-.septimo {
-float: left;
-}
-.octavo {
+.registro {
 float: left;
 }
