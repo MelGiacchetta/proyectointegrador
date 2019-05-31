@@ -60,16 +60,17 @@ float: left;
 float: left;
 }
 
-<<<<<<< HEAD
 .secciones {
   color: white;
-=======
+}
+
 #Buscador {
 display: none;
 }
 #lupa {
 width: 29px;
 height: 15px;
+
 }
 #botonBuscar {
 background: white;
