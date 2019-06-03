@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 body{
-  background: black;
+  background-image: url(https://i.pinimg.com/564x/c8/82/04/c88204ab3db0882f154847a6a6fa0f36.jpg);
+  background-repeat: repeat;
   font-family: monospace;
   margin: 0px;
 }
@@ -10,10 +11,9 @@ header {
   background: white;
   position: relative;
   width: 100%;
-  height: 0px;
   overflow: hidden;
   border-radius: 13px;
-
+  margin: 0 auto;
 }
 div.contenedor {
   color: black;
@@ -24,13 +24,11 @@ div.contenedor {
   padding-top: 14px;
   overflow: hidden;
   width: 100%;
-
-  margin: 0 auto;
+  padding-bottom: 10px;
 }
 .logo {
   border-radius: 250px;
   height: 44px;
-}
 }
 .nombres {
   list-style: none;
@@ -38,30 +36,49 @@ div.contenedor {
 }
 .ellogo {
   float: left;
+  position: relative;
+  margin-left: 1%;
 }
 .bienvenido {
 float: left;
 font-size: 25px;
+position: absolute;
 margin-top: -28px;
+margin-left: 5%;
 }
 .pelispreferidas {
 float: left;
+position: absolute;
 margin-top: 20px;
-margin-left: -149px;
+margin-left: 5%;
 }
 .buscador {
 float: left;
-margin-left: 66px;
+position: absolute;
+margin-left: 55%;
+}
+.select {
+  float: left;
+  position: absolute;
+  margin-left: 70%;
+  padding-right: 100px;
 }
 .usuario {
 float: left;
+position: absolute;
+margin-left: 90%;
 }
 .registro {
 float: left;
+position: absolute;
+margin-left: 90%;
+margin-top: 25px;
 }
 
 .secciones {
   color: white;
+  position: absolute;
+  margin-top: 70px;
 }
 
 #Buscador {
@@ -70,10 +87,7 @@ display: none;
 #lupa {
 width: 29px;
 height: 15px;
-
 }
 #botonBuscar {
 background: white;
-
->>>>>>> master
 }
