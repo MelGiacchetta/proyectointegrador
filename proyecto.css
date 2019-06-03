@@ -62,11 +62,19 @@ margin-left: 55%;
   position: absolute;
   margin-left: 70%;
   padding-right: 100px;
+  border-radius: 7px;
 }
 .usuario {
 float: left;
 position: absolute;
 margin-left: 90%;
+}
+.botonUsuario{
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-radius: 7px;
+  font-size: 13.5px;
 }
 .registro {
 float: left;
@@ -74,7 +82,15 @@ position: absolute;
 margin-left: 90%;
 margin-top: 25px;
 }
+.botonRegistro {
+background-color: black;
+color: white;
+border-color: black;
+border-radius: 7px;
+font-size:13.5px;
+}
 
+}
 .secciones {
   color: white;
   position: absolute;
