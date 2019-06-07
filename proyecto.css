@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-body{
+body {
   background-image: url(https://i.pinimg.com/564x/c8/82/04/c88204ab3db0882f154847a6a6fa0f36.jpg);
   background-repeat: repeat;
   font-family: monospace;
@@ -60,7 +60,7 @@ margin-left: 55%;
 .select {
   float: left;
   position: absolute;
-  margin-left: 70%;
+  margin-left: 69%;
   padding-right: 100px;
   border-radius: 7px;
 }
@@ -90,11 +90,26 @@ border-radius: 7px;
 font-size:13.5px;
 }
 
-}
 .secciones {
   color: white;
   position: absolute;
-  margin-top: 70px;
+  margin-top: 100px;
+  margin-left: 2%;
+}
+
+.populares {
+  position: relative;
+  font-size: 20px;
+}
+
+.puntaje {
+  position: relative;
+  font-size: 20px;
+}
+
+.proximamente {
+  position: relative;
+  font-size: 20px;
 }
 
 #Buscador {

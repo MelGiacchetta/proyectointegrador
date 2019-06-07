@@ -1,0 +1,210 @@
+body {
+    background-image: url(https://i.pinimg.com/564x/c8/82/04/c88204ab3db0882f154847a6a6fa0f36.jpg);
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+}
+
+.card {
+    background: #ffff;
+    border-radius: 0.2em;
+    position: relative;
+    text-align: center;    
+}
+
+body,
+.clearfix,
+.card:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.modal-opener {
+    background: #0c8;
+    padding: 12px 15px;
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.2em;
+}
+
+.modal-opener:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2em;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.modal-opener:focus {
+    outline: none;
+}
+
+.modal-opener:hover:before,
+.modal-opener:focus:before {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+
+
+
+/* MODAL MAGIC <3 */
+body.modal-active {
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+    min-height: 100vh;
+}
+
+.modal-underlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.modal {
+    position: absolute;
+    top: 15px;
+    width: 970px; /* Important that both width and height are even!!! */
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(20deg);
+    transform: translate3d(-50%, -50%, 0) rotateX(20deg);
+    z-index: 11;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, transform 0.3s, width 0.3s;
+    transition: opacity 0.5s, transform 0.3s, width 0.3s;
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.modal.active {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(0);
+    transform: translate3d(-50%, -50%, 0) rotateX(0);
+}
+
+.modal .title {
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    padding: 15px;
+    background: #0c8;
+    font-weight: 300;
+    line-height: 110%;
+}
+
+.modal .closer {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.modal .closer:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal .closer:before,
+.modal .closer:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 30px;
+    background: #fff;
+    border-radius: 0.3em;
+    -webkit-transform-origin: 50% 50% 50%;
+    -ms-transform-origin: 50% 50% 50%;
+    transform-origin: 50% 50% 50%;
+    z-index: 2;
+}
+
+.modal .closer:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal .closer:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal .content {
+    line-height: 1.5;
+    padding: 15px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: auto;
+    height: calc(100% - 92px);
+}
+
+.modal.with-confirm .content {
+    height: calc(100% - 142px);
+}
+
+.modal .confirm-wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.modal .confirm {
+    position: relative;
+    float: left;
+    width: 50px;
+    text-align: center;
+    padding: 10px 15px;
+    color: #0c8;
+    text-decoration: none;
+    margin-right: 6px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.modal .confirm:hover,
+.modal .confirm:focus {
+    background: rgba(0,0,0,0.08);
+    outline: none;
+}
+
+@media (max-width: 992px) {
+    .modal {
+        width: 750px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 300px;
+    }
+}
