@@ -6,19 +6,17 @@ body {
   background-repeat: repeat;
   font-family: monospace;
   margin: 0px;
+  height: 100vh;
 }
 header {
   background: white;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
-  overflow: hidden;
   border-radius: 13px;
-  margin: 0 auto;
 }
 div.contenedor {
   color: black;
-  position: fixed;
-  top: 0;
   border-radius: 13px;
   background-color: white;
   padding-top: 14px;
