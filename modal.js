@@ -96,6 +96,7 @@
 
 $(document).ready(function(){
     $('.modal-opener').modal({
+        title:"Ingresar",
         content: 'Ingresa tus datos: <br> <form> <label>Nombre: </label> <input name="nombre" type="text"> <br> <label>Email: </label> <input name="email" type="email"> <br> <label>Contraseña: </label> <input name="contraseña" type="password"> </form>',
         confirm: {
             text: 'ENVIAR',

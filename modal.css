@@ -10,7 +10,7 @@ body {
     background: #ffff;
     border-radius: 0.2em;
     position: relative;
-    text-align: center;    
+    text-align: center;
 }
 
 body,
@@ -181,7 +181,6 @@ body.modal-active {
 .modal .confirm {
     position: relative;
     float: left;
-    width: 50px;
     text-align: center;
     padding: 10px 15px;
     color: #0c8;
