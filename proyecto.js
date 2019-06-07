@@ -7,7 +7,7 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
       document.querySelector("")
     }
 
-  }
+
 
      //vinculamos la api con la página para los géneros
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
