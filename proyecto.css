@@ -117,8 +117,10 @@ font-size:13.5px;
   font-family: monospace;
 }
 div.slider ul li img{
-  width: 92%;
-
+  width: 94%;
+}
+.slider {
+  width: 100%;
 }
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
