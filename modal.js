@@ -87,6 +87,9 @@
 
         modal.on('click', function(){
             modal.openModal();
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".modal").offset().top - 200
+            }, 1000);
             return false;
         });
 
