@@ -96,7 +96,7 @@ font-size:13.5px;
   position: absolute;
   margin-top: 70px;
 }
-
+/*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
 display: none;
 }
