@@ -62,7 +62,7 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
               console.log(populares);
               // despues de la img va siempre esa url
               for (var i = 0; i < populares.length; i++) {
-                document.querySelector(".populares").innerHTML += '<li><img src="https://image.tmdb.org/t/p/original/' + populares[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></li>'
+                document.querySelector(".populares").innerHTML += '<li class="uk-cover-container" uk-height-viewport"><img src="https://image.tmdb.org/t/p/original/' + populares[i].poster_path + '" alt="" > <div class="uk-position-center uk-panel"></div></li>'
               }
               console.log(document.querySelector(".populares").innerHTML);
             })

@@ -6,7 +6,7 @@ body {
   background-repeat: repeat;
   font-family: monospace;
   margin: 0px;
-  height: 500vh;   
+  height: 500vh;
 }
 header {
   background: white;
@@ -110,6 +110,15 @@ font-size:13.5px;
 .proximamente {
   position: relative;
   font-size: 20px;
+}
+.titulos {
+  /*estilo a mas populares, proximamente y mejor puntuadas*/
+  font-size: 25px;
+  font-family: monospace;
+}
+div.slider ul li img{
+  width: 92%;
+
 }
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
