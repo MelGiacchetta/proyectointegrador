@@ -42,7 +42,7 @@ body,
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
     background-color: black;
-    
+
 }
 
 .modal-opener:focus {
@@ -79,12 +79,12 @@ body.modal-active {
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 15px;
     width: 970px; /* Important that both width and height are even!!! */
     height: 400px;
     left: 50%;
-    top: 50%;
+    top: 50vh;
     -webkit-transform: translate3d(-50%, -50%, 0) rotateX(20deg);
     transform: translate3d(-50%, -50%, 0) rotateX(20deg);
     z-index: 11;
