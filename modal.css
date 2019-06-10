@@ -102,6 +102,7 @@ body.modal-active {
     opacity: 1;
     -webkit-transform: translate3d(-50%, -50%, 0) rotateX(0);
     transform: translate3d(-50%, -50%, 0) rotateX(0);
+    width: 30%;
 }
 
 .modal .title {

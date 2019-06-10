@@ -100,7 +100,7 @@
 $(document).ready(function(){
     $('.modal-opener').modal({
         title:"Ingresar",
-        content: '<form> <label>Nombre: </label> <input name="nombre" type="text"> <br> <label>Email: </label> <input name="email" type="email"> <br> <label>Contraseña: </label> <input name="contraseña" type="password"> </form>',
+      content: '<form> <label>Nombre:</label> <br> <input name="nombre" type="text"> <br> <label>Email:</label> <br> <input name="email" type="email"> <br> <label>Contraseña:</label> <br> <input name="contraseña" type="password"> </form>',
         confirm: {
             text: 'ENVIAR',
             link: '#'
