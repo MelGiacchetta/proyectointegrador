@@ -147,9 +147,6 @@ height: 15px;
 #botonBuscar {
 background: white;
 }
-.p, .i, .g, {
-  display: none;
-}
 
 a.icon {
   display: none;
@@ -157,6 +154,8 @@ a.icon {
 div.mobile{
   display: none;
 }
+
+/* PARA CELULAR */
 @media only screen and (max-width: 600px) {
   div.mobile{
     display: block;
