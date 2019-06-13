@@ -128,6 +128,9 @@ height: 15px;
 #botonBuscar {
 background: white;
 }
+.p, .i, .g, {
+  display: none;
+}
 
 a.icon {
   display: none;
@@ -138,8 +141,9 @@ a.icon {
   /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: black;
+  background-color: white;
   position: relative;
+  height: 100px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -149,11 +153,12 @@ a.icon {
 
 /* Style navigation menu links */
 .topnav a {
-  color: white;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   display: block;
+  text-align: center;
 }
 
 /* Style the hamburger menu */
@@ -176,5 +181,16 @@ a.icon {
   background-color: #4CAF50;
   color: white;
 } */
+
+.bienvenido {
+float: left;
+font-size: 20px;
+position: absolute;
+margin-top: 0px;
+margin-left: 10%;
+}
+.pelispreferidas, .buscador, .select, .usuario, .registro  {
+  display: none;
+}
 
 }
