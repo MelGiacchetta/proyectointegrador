@@ -26,7 +26,9 @@ header {
 }
 .nombres {
   list-style: none;
-  font-size: 8px;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 80%;
 }
 .ellogo {
   float: left;
@@ -128,13 +130,19 @@ div.slider ul li img{
   padding-bottom: 10px;
   margin-bottom: 0px;
   z-index: 20;
+  bottom: 0;
 }
 .tmdb {
   height: 50px;
   float: left;
+  margin-left: 2%;
 }
 .scrollUP {
   float: left;
+  margin-left: 5%;
+}
+a.uk-button {
+  background-color: black;
 }
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
