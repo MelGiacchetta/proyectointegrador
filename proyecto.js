@@ -73,10 +73,15 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
   var x = document.querySelector("#myLinks");
+  var header = document.querySelector(".topnav")
   console.log(x);
   if (x.style.display === "block") {
     x.style.display = "none";
+    // header.style.height= "85px"
+    // header.style.position="relative"
   } else {
     x.style.display = "block";
+    // header.style.height= "190px"
+    // header.style.position="absolute"
   }
 }

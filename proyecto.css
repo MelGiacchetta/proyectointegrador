@@ -154,8 +154,13 @@ background: white;
 a.icon {
   display: none;
 }
-
+div.mobile{
+  display: none;
+}
 @media only screen and (max-width: 600px) {
+  div.mobile{
+    display: block;
+  }
 
   /* Style the navigation menu */
 .topnav {
