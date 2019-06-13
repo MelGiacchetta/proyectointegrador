@@ -66,30 +66,17 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
               }
               console.log(document.querySelector(".populares").innerHTML);
             })
-            /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    } //cuando escribe y despues toca el buscar debe tener al menos tres caracteres, sino le marca error
-    // function boton() {
-    // document.querySelector("#botonBuscar").addEventListener("click", function(){
-    //   var contador = setTimeout (function (){
-    //   alert("Debe ingresar al menos tres caracteres")
-    //   console.log(contador);
-    //   },3000)
-    // })
-  //}
-  
-
-
 
 }
 
-// var error = setTimeout (function(){
-// }, 3000)
-// console.log(error);
-// }
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.querySelector("#myLinks");
+  console.log(x);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

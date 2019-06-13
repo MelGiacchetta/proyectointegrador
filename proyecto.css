@@ -147,14 +147,22 @@ height: 15px;
 #botonBuscar {
 background: white;
 }
+.p, .i, .g, {
+  display: none;
+}
 
-@media (max-width: 600px) {
+a.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
 
   /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: black;
+  background-color: white;
   position: relative;
+  height: 100px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -164,11 +172,12 @@ background: white;
 
 /* Style navigation menu links */
 .topnav a {
-  color: white;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   display: block;
+  text-align: center;
 }
 
 /* Style the hamburger menu */
@@ -181,15 +190,26 @@ background: white;
 }
 
 /* Add a grey background color on mouse-over */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+} */
 
 /* Style the active link (or home/logo) */
-.active {
+/* .active {
   background-color: #4CAF50;
   color: white;
+} */
+
+.bienvenido {
+float: left;
+font-size: 20px;
+position: absolute;
+margin-top: 0px;
+margin-left: 10%;
+}
+.pelispreferidas, .buscador, .select, .usuario, .registro  {
+  display: none;
 }
 
 }
