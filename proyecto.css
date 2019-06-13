@@ -153,6 +153,11 @@ a.uk-button {
   background-color: black;
   border-radius: 20px;
 }
+a.uk-button:hover {
+  background-color: black;
+
+}
+
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
 display: none;
