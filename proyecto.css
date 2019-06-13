@@ -129,7 +129,11 @@ height: 15px;
 background: white;
 }
 
-@media (max-width: 600px) {
+a.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
 
   /* Style the navigation menu */
 .topnav {
@@ -162,15 +166,15 @@ background: white;
 }
 
 /* Add a grey background color on mouse-over */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+} */
 
 /* Style the active link (or home/logo) */
-.active {
+/* .active {
   background-color: #4CAF50;
   color: white;
-}
+} */
 
 }

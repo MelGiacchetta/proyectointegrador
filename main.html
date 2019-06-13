@@ -15,6 +15,8 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <!-- css del navbar del media query -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -25,10 +27,17 @@
          <div class="bienvenido">
             <p>Bienvenido</p>
          </div>
-      <div class="mobile" id="mylinks">        
+          <div class="mobile" id="myLinks">
+            <a href="#news">1200x630f</a>
+            <a href="#contact">Contact 2</a>
+            <a href="#about">About1</a>
+         </div>
          <div class="pelispreferidas">
             <p>Películas Preferidas</p> <!-- js solo logeado  -->
          </div>
+         <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
          <div class="buscador">
              <label for="Buscador">
              <input type="text" name="Buscador" value="" placeholder="Buscar" id="Buscador">
@@ -51,7 +60,7 @@
            <label for="registro"></label>
            <button  class="botonRegistro" type="button" name="button"> Registrarse</button>
          </div>
-       </div>
+
     </header>
 
     <div class="secciones">
