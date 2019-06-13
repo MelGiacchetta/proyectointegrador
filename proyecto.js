@@ -74,5 +74,22 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
       } else {
         x.style.display = "block";
       }
-    }
+    } //cuando escribe y despues toca el buscar debe tener al menos tres caracteres, sino le marca error
+    // function boton() {
+    // document.querySelector("#botonBuscar").addEventListener("click", function(){
+    //   var contador = setTimeout (function (){
+    //   alert("Debe ingresar al menos tres caracteres")
+    //   console.log(contador);
+    //   },3000)
+    // })
+  //}
+  
+
+
+
 }
+
+// var error = setTimeout (function(){
+// }, 3000)
+// console.log(error);
+// }

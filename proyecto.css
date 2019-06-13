@@ -117,6 +117,25 @@ div.slider ul li img{
 .slider {
   width: 100%;
 }
+.footer{
+  background-color: white;
+  background: white;
+  position: fixed;
+  width: 100%;
+  border-radius: 13px;
+  padding-top: 25px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  z-index: 20;
+}
+.tmdb {
+  height: 50px;
+  float: left;
+}
+.scrollUP {
+  float: left;
+}
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
 display: none;
