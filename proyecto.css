@@ -157,6 +157,10 @@ a.uk-button:hover {
   background-color: black;
 
 }
+a.botonUsuario:hover{
+  text-decoration: none;
+  color: white;
+}
 
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
 #Buscador {
