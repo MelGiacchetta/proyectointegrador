@@ -13,8 +13,8 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
       })
       .then(function(datos) {
         console.log(datos);
-        var generos = datos.genres
 
+        var generos = datos.genres
         for (var i = 0; i < generos.length; i++) {
           document.querySelector(".generos").innerHTML += '<option value="' + generos[i].id + '">' + generos[i].name + '</option>'
         }
