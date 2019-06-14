@@ -80,6 +80,19 @@ a.botonUsuario{
   font-size: 13.5px;
   border-radius: 30px;
 }
+.botonLogin {
+  /* Este es el boton de enviar del modal del login */
+    margin-left: 68%;
+    padding: 7px;
+    background: black;
+    color: white;
+    border: black;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+    border-radius: 20px;
+}
 .registro {
 float: left;
 position: absolute;
