@@ -9,7 +9,7 @@ body {
   height: 500vh;
 }
 header {
-  background: white;
+  background: rgb(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,7 +29,7 @@ header {
   font-size: 10px;
   margin-top: 20px;
   margin-left: 80%;
-  color: black;
+  color: white;
 }
 .ellogo {
   float: left;
@@ -42,14 +42,14 @@ font-size: 25px;
 position: absolute;
 margin-top: -10px;
 margin-left: 5%;
-color: black;
+color: white;
 }
 .pelispreferidas {
 float: left;
 position: absolute;
 margin-top: 20px;
 margin-left: 5%;
-color: black;
+color: white;
 }
 .buscador {
 float: left;
@@ -74,12 +74,14 @@ bottom: 10px;
 }
 
 a.botonUsuario{
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border-color: black;
   font-size: 13.5px;
   border-radius: 30px;
+  margin-top: -33px;
 }
+
 .botonLogin {
   /* Este es el boton de enviar del modal del login */
     margin-left: 68%;
@@ -92,22 +94,7 @@ a.botonUsuario{
     padding-left: 15px;
     font-size: 14px;
     border-radius: 20px;
-}
-.registro {
-float: left;
-position: absolute;
-margin-left: 91%;
-margin-top: 0px;
-text-align: center;
-}
-.botonRegistro {
-background-color: black;
-color: white;
-border-color: black;
-border-radius: 10px;
-font-size:13.5px;
-}
-
+  }
 .secciones {
   color: white;
   position: absolute;
@@ -137,13 +124,11 @@ font-size:13.5px;
 div.slider ul li img{
   width: 94%;
 }
-<<<<<<< Updated upstream
 .slider {
   width: 100%;
 }
 .footer{
-  background-color: white;
-  background: white;
+  background: rgb(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
   border-radius: 13px;
@@ -186,6 +171,9 @@ height: 15px;
 }
 #botonBuscar {
 background: white;
+border: 0px;
+border-radius: 15px;
+padding: 5px;
 }
 
 a.icon {
@@ -194,7 +182,10 @@ a.icon {
 div.mobile{
   display: none;
 }
+/* PARA TABLETS */
+@media only screen and (max-width: 768px) {
 
+}
 /* PARA CELULAR */
 @media only screen and (max-width: 600px) {
   div.mobile{
@@ -245,16 +236,18 @@ div.mobile{
   color: white;
 } */
 
-.bienvenido {
+div.bienvenido{
 float: left;
-font-size: 20px;
 position: absolute;
 margin-top: 0px;
-margin-left: 10%;
+margin-left: 22%;
+font-size: 20px;
+
 
 }
 .pelispreferidas, .buscador, .select, .usuario, .registro  {
   display: none;
 }
+
 
 }

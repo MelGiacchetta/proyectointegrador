@@ -26,8 +26,6 @@ function procesarLogin(evento) {
      document.querySelector(".botonUsuario").style.display = "none"
      // el mensaje de bienvenido al usuario logueado
      document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + nombre + "!</p> </div>"
-     // al loguearse, el boton de registro desaparece
-     document.querySelector(".botonRegistro").style.display = "none"
   }
 
 
