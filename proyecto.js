@@ -67,7 +67,7 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
             console.log(puntaje);
             // despues de la img va siempre esa url
             for (var i = 0; i < puntaje.length; i++) {
-              document.querySelector(".puntaje").innerHTML += '<li><img src="https://image.tmdb.org/t/p/original/' + puntaje[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></li>'
+              document.querySelector(".puntaje").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+ puntaje[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + puntaje[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
             }
             console.log(document.querySelector(".puntaje").innerHTML);
           })
@@ -82,7 +82,7 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
               console.log(populares);
               // despues de la img va siempre esa url
               for (var i = 0; i < populares.length; i++) {
-                document.querySelector(".populares").innerHTML += '<li class="uk-cover-container" uk-height-viewport"><img src="https://image.tmdb.org/t/p/original/' + populares[i].poster_path + '" alt="" > <div class="uk-position-center uk-panel"></div></li>'
+                document.querySelector(".populares").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+populares[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + populares[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
               }
               console.log(document.querySelector(".populares").innerHTML);
             })

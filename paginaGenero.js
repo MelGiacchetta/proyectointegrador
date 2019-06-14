@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
       console.log(peliculas);
       // despues de la img va siempre esa url
       for (var i = 0; i < peliculas.length; i++) {
-        document.querySelector(".porGenero").innerHTML += '<li ><img src="https://image.tmdb.org/t/p/original/' + peliculas[i].poster_path + '"alt=""> <div class="uk-position-center uk-panel"></div></li>'
+        document.querySelector(".porGenero").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+ peliculas[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + peliculas[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
       }
       console.log(document.querySelector(".estrenos").innerHTML);
     })
