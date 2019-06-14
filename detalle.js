@@ -27,7 +27,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
-    contenedorpelis.innerHTML= '<p>' + datos.title + '</p>' + '<p>' + datos.overview + '</p>'+ '<p>' + generos + '</p>' + '<p>' + datos.original_language + '</p>' +'<p>' + datos.release_date+ '</p>' ;
+    contenedorpelis.innerHTML= '<p class="tituloPeli">' + datos.title + '</p>' + '<p>' + datos.overview + '</p>'+ '<p>' + generos + '</p>' + '<p>' + datos.original_language + '</p>' +'<p>' + datos.release_date+ '</p>' ;
 
   })
   .catch(function(error){

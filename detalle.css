@@ -1,0 +1,20 @@
+main{
+  overflow: hidden;
+}
+
+.imagenpelis {
+  width: 23%;
+  margin-top:75px;
+  float:left;
+}
+.contenedorpelis {
+  float: left;
+  font-family: monospace;
+  color: white;
+  width: 70%;
+  margin-top:75px;
+  margin-left: 20px;
+}
+.tituloPeli {
+  font-size: 40px;
+}
