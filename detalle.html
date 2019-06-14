@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <title></title>
     <link rel="stylesheet" href="proyecto.css">
-    <script type="proyecto.js">
-  
+    <link rel="stylesheet" href="modal.css">
+    <title>eLit</title>
+    <script type="text/javascript" src="proyecto.js">
     </script>
-  </head>
-  <body>
+    <script type="detalle.js">
 
+    </script>
+    <link rel="stylesheet" href="animate.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <!-- css del navbar del media query -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header class="topnav">
+          <div class="ellogo">
+            <img class= "logo active" src="imagenes/logo.jpeg" alt="">
+          </div>
+         <div class="bienvenido">
+            <p>Bienvenido</p>
+         </div>
+          <div class="mobile" id="myLinks">
+            <a href="#news" class="g">Generos</a>
+            <a href="#contact" class="i">Iniciar sesion</a>
+            <a href="#about" class="p">Peliculas Preferidas</a>
+         </div>
+         <div class="pelispreferidas">
+            <p>Películas Preferidas</p> <!-- js solo logeado  -->
+         </div>
+         <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+         <div class="buscador">
+             <label for="Buscador">
+             <input type="text" name="Buscador" value="" placeholder="Buscar" id="Buscador">
+             <button id="botonBuscar" type="submit" name="button"> <img id= "lupa" src="https://imageog.flaticon.com/icons/png/512/25/25313.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt=""> </button>
+             </label>
+            <label for="genero" class="genero">
+            </label>
+          </div>
+          <div class="select">
+              <select class="generos" name="genero" id="genero" value="Géneros">
+              <option value="G" selected disabled>Géneros</option>
+              <!-- no se ponen los géneros porque lo hace automaticamente la API -->
+            </select>
+         </div>
+         <div class="usuario card">
+            <label for="usuario">
+             <a href="#" class="botonUsuario modal-opener waves-effect" type="button" name="button"> Iniciar sesión </a>
+           </div>
+         <div class="registro">
+           <label for="registro"></label>
+           <button  class="botonRegistro" type="button" name="button"> Registrarse</button>
+         </div>
+
+    </header>
+
+
+
+    <footer class ="footer">
+      <div class ="logoReferencia">
+        <img class="tmdb" src="https://www.themoviedb.org/assets/2/v4/logos/312x276-primary-green-74212f6247252a023be0f02a5a45794925c3689117da9d20ffe47742a665c518.png" alt="">
+
+      </div>
+      <div class="scrollUP">
+        <!-- sacado de uikit -->
+      <a class="uk-button uk-button-primary" href="#target" uk-scroll>HOME</a>
+      </div>
+       <div class="nosotras">
+        <ul class="nombres">
+          <li>Cavanagh, Juarez, Giacchetta</li>
+        </ul>
+      </div>
+
+    </footer>
   </body>
 </html>
+
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="modal.js"></script>
