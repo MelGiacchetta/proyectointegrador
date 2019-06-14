@@ -44,7 +44,7 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
           console.log(estrenos);
           // despues de la img va siempre esa url
           for (var i = 0; i < estrenos.length; i++) {
-            document.querySelector(".estrenos").innerHTML+= '<li ><img src="https://image.tmdb.org/t/p/original/' + estrenos[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></li>'
+            document.querySelector(".estrenos").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+estrenos[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + estrenos[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
           }
           console.log(document.querySelector(".estrenos").innerHTML);
         })
