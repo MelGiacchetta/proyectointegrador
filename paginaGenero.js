@@ -1,6 +1,13 @@
 window.addEventListener("load", function() {
+  var url_string = window.location.href ; //window.location.href
+  var url = new URL(url_string);
+  var idGenSel = url.searchParams.get("idGenero");
 
-  fetch("https://api.themoviedb.org/3/discover/movie?api_key=ccaee37d8fbe5010cfb857e26fcce8d4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=18")
+  var genero = url.searchParams.get("nombre");
+  var cambioGenero = document.querySelector(".titulos");
+  cambioGenero.innerHTML = genero + ":";
+
+  fetch("https://api.themoviedb.org/3/discover/movie?api_key=ccaee37d8fbe5010cfb857e26fcce8d4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + idGenSel)
     .then(function(respuesta) {
       return respuesta.json()
     })
@@ -15,12 +22,4 @@ window.addEventListener("load", function() {
       console.log(document.querySelector(".estrenos").innerHTML);
     })
 
-    // var qs = location.search
-    // qs = new URLSearchParams (qs)
-    // var idGeneroSel = qs.get("id")
-
-    var url_string = window.location.href ; //window.location.href
-    var url = new URL(url_string);
-    var idGenSel = url.searchParams.get(".porGenero");
-    console.log(idGenSel);
 })
