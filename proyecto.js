@@ -1,8 +1,23 @@
 window.onload = function() { // capturamos el boton buscar y cuando se haga click en este, hace una animación y aparece el buscador que no estaba//
-    document.querySelector("#botonBuscar").onclick = function() {
+    document.querySelector("#botonBuscar").addEventListener("click", function(e) {
+      e.preventDefault()
     document.querySelector("#Buscador").classList.add('animated', 'slideInLeft')
     document.querySelector("#Buscador").style.display = "inline"
-    }
+    var boton = document.querySelector("#botonBuscar")
+    // Agarramos el boton de la lupa para que cuando se haga click se haga la busqueda
+    boton.addEventListener("click", function(e) {
+      e.preventDefault()
+      // El prevent default cancela el evento si este es cancelable, sin detener el resto del funcionamiento del evento, es decir, puede ser llamado de nuevo
+      var input = document.querySelector("#Buscador")
+      // Si lo que busca el usuario tiene menos de tres caracteres, se aparecera un modal sacado de uikit que le avise al usuario esto
+      if (input.value.length < 3) {
+        // Close all: esta funcion de uikit es para que cuando se apreta la x de cerrar, se cierren todas las notificaciones
+        UIkit.notification.closeAll()
+        UIkit.notification("Deben haber al menos tres caracteres", {status:'warning'})
+      }
+    })
+  })
+
     var registro = function (){
       document.querySelector("")
     }
@@ -79,6 +94,7 @@ function myFunction() {
     // header.style.height= "190px"
     // header.style.position="absolute"
   }
-  
+
+
 
 }
