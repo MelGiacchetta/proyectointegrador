@@ -100,10 +100,6 @@
 $(document).ready(function(){
     $('.modal-opener').modal({
         title:"Ingresar",
-      content: '<form> <label>Nombre:</label> <br> <input name="nombre" type="text"> <br> <label>Email:</label> <br> <input name="email" type="email"> <br> <label>Contraseña:</label> <br> <input name="contraseña" type="password"> </form>',
-        confirm: {
-            text: 'ENVIAR',
-            link: '#'
-        }
+      content: '<form onsubmit=procesarLogin(event)> <label>Nombre:</label> <br> <input class="campoNombre" name="nombre" type="text"> <br> <label>Email:</label> <br> <input class="campoEmail" name="email" type="email"> <br><button type="submit">Enviar</button> </form>'
     });
 });
