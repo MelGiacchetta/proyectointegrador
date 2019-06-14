@@ -40,14 +40,14 @@ header {
 float: left;
 font-size: 25px;
 position: absolute;
-margin-top: 0px;
+margin-top: -10px;
 margin-left: 5%;
 color: black;
 }
 .pelispreferidas {
 float: left;
 position: absolute;
-margin-top: 30px;
+margin-top: 20px;
 margin-left: 5%;
 color: black;
 }
