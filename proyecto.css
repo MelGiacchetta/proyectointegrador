@@ -149,16 +149,19 @@ div.slider ul li img{
   margin-left: 5%;
 }
 a.uk-button {
-  background-color: black;
+  background-color: white;
   border-radius: 20px;
+  margin-top: 4px;
+  color: black;
 }
 a.uk-button:hover,a.uk-button:focus {
-  background-color: black;
+  background-color: white;
+  color: black;
 
 }
 a.botonUsuario:hover{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 /*  este buscador tiene display none para cuando se hace onclick en  el boton buscar em js aparezca la barra de escribir*/
