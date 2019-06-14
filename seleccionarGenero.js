@@ -15,6 +15,7 @@ window.addEventListener("load", function() {
 
   document.querySelector("select.generos").onchange = function() {
     var opcion = this.options[this.selectedIndex].value;
-    location.href = "paginaGenero.html?idGenero=" + opcion
+    var nombreOpcion = this.options[this.selectedIndex].text;
+    location.href = "paginaGenero.html?idGenero=" + opcion +  "&nombre=" + nombreOpcion
   }
 })

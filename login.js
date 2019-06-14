@@ -1,6 +1,13 @@
 window.addEventListener("load", function() {
   console.log("Estamos en el archivo nuevo");
 
+  if (sessionStorage.getItem("usuario") != null) {
+    // al loguearse, el boton de iniciar sesion desaparece
+    document.querySelector(".botonUsuario").style.display = "none"
+    // el mensaje de bienvenido al usuario logueado
+    document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + sessionStorage.getItem("usuario") + "!</p> </div>"
+  }
+
 
 })
 
@@ -26,6 +33,7 @@ function procesarLogin(evento) {
      document.querySelector(".botonUsuario").style.display = "none"
      // el mensaje de bienvenido al usuario logueado
      document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + nombre + "!</p> </div>"
+     sessionStorage.setItem("usuario", nombre)
   }
 
 
