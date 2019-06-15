@@ -4,9 +4,10 @@
 body {
   background-image: url(https://i.pinimg.com/564x/c8/82/04/c88204ab3db0882f154847a6a6fa0f36.jpg);
   background-repeat: repeat;
+  background-attachment: fixed;
   font-family: monospace;
   margin: 0px;
-  height: 500vh;
+  height: 300vh;
 }
 header {
   background: rgb(0, 0, 0, 0.7);
