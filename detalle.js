@@ -33,6 +33,19 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   .catch(function(error){
     console.log(error)
   })
+  //fetch del trailer
+  fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
+  .then(function(respuesta){
+    return respuesta.json();
+  })
+  .then(function(datos){
+    console.log(datos)
+    var key= datos.results[0].key
+    document.querySelector("iframe").src += key
+  })
+  .catch(function(error){
+    console.log(error)
+  })
 
 
 
