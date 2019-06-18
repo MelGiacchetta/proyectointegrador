@@ -102,8 +102,5 @@ function myFunction() {
     // header.style.height= "190px"
     // header.style.position="absolute"
   }
-
-
-
-
 }
+//peliculas Preferidas

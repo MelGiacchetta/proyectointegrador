@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
   var id = urlParams.get('idDePelicula');
 
   console.log("detalle");
-   //detalle pelicula
+   //detalle pelicula proximamente
 fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
@@ -22,6 +22,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var titulo =datos.title;
     var arrayDeGeneros= datos.genres;
     var generos=""
+    // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
       generos += arrayDeGeneros[i].name+ ", "
     }
@@ -33,6 +34,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   .catch(function(error){
     console.log(error)
   })
+
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
@@ -46,6 +48,30 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   .catch(function(error){
     console.log(error)
   })
+document.querySelector(".VerRecomendaciones").addEventListener("click", function(){
+  fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
+  .then(function(respuesta){
+    return respuesta.json()
+  })
+  .then(function(datos){
+    console.log(datos)
+    var poster= datos.poster_path
+    for (var i = 0; i < poster.length; i++) {
+      document.querySelector(".PosterRec").innerHTML }
+
+  })
+  .catch(function (error){
+    console.log(error)
+  })
+
+
+})
+
+
+
+
+
+
 
 
 
