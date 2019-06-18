@@ -48,33 +48,22 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   .catch(function(error){
     console.log(error)
   })
+
 document.querySelector(".VerRecomendaciones").addEventListener("click", function(){
-  fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
-  .then(function(respuesta){
-    return respuesta.json()
-  })
-  .then(function(datos){
-    console.log(datos)
-    var poster= datos.poster_path
-    for (var i = 0; i < poster.length; i++) {
-      document.querySelector(".PosterRec").innerHTML }
-
-  })
-  .catch(function (error){
-    console.log(error)
-  })
-
-
+fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
+.then(function(respuesta){
+ return respuesta.json()
 })
-
-
-
-
-
-
-
-
-
+.then(function(datos){
+console.log(datos)
+var recomendaciones = datos.results
+console.log(recomendaciones);
+for (var i = 0; i < puntaje.length; i++) {
+document.querySelector(".recomendadas").innerHTML+= '<img src="https://image.tmdb.org/t/p/original/' + recomendadas[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>' }
+})
+.catch(function (error){
+  console.log(error) })
+})
 
 
 
