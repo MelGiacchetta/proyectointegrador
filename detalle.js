@@ -47,7 +47,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   })
   .catch(function(error){
     console.log(error)
-    alert("No hay Trailer para esta película")
   })
 
 document.querySelector(".VerRecomendaciones").addEventListener("click", function(){
