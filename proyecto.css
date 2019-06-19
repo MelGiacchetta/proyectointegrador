@@ -202,10 +202,11 @@ div.mobile{
 
   /* Style the navigation menu */
 .topnav {
-  overflow: hidden;
+  *overflow: hidden;
   background-color: rgb(0, 0, 0, 0.7);
   position: relative;
   height: 100px;
+
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -232,17 +233,21 @@ div.mobile{
   top: 0;
 }
 
-/* Add a grey background color on mouse-over */ */
+/* Add a grey background color on mouse-over */
   .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(0, 0, 0, 0.7);
   color: black;
+  display: block;
+}
+.fa {
+  color: rgb(249, 0, 0)
 }
 
  /* Style the active link (or home/logo)  */
  .active {
   background-color: #4CAF50;
   color: white;
-} 
+}
 
 div.bienvenido{
 float: left;

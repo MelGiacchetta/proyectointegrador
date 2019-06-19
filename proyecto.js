@@ -26,9 +26,6 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
     }
   })
 
-    var registro = function (){
-      document.querySelector("")
-    }
      //vinculamos la api con la página para los géneros
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
       .then(function(respuesta) {
@@ -86,14 +83,13 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
               }
               console.log(document.querySelector(".populares").innerHTML);
             })
-
-}
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
+function myFunction(){
   var x = document.querySelector("#myLinks");
   var header = document.querySelector(".topnav")
   console.log(x);
-  if (x.style.display === "block") {
+  console.log(header);
+  /*if (x.style.display === "block") {
     x.style.display = "none";
     // header.style.height= "85px"
     // header.style.position="relative"
@@ -101,8 +97,14 @@ function myFunction() {
     x.style.display = "block";
     // header.style.height= "190px"
     // header.style.position="absolute"
-  }
-
+  }*/
+}
+/*document.querySelector(".icon").onclick = function(e){
+document.querySelector(".p").style.display = "block"
+document.querySelector(".buscar").style.display = "block"
+document.querySelector(".generos").style.display = "block"
+document.querySelector(".botonUsuario").style.display = "block"
+}*/
 
 
 }
