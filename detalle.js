@@ -60,9 +60,11 @@ var recomendaciones = datos.results
 var r= ""
 console.log(recomendaciones);
 for (var i = 0; i < recomendaciones.length; i++) {
-document.querySelector(".Recomendadas").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+recomendaciones[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + recomendaciones[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
-
+document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+recomendaciones[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + recomendaciones[i].poster_path + '" alt=""></a></li>'
 }})
+.catch(function(){
+  console.log(error)
+})
 })
 
 
