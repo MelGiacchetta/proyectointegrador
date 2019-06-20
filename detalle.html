@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <!-- vinculacion con las demas páginas de css -->
     <link rel="stylesheet" href="detalle.css">
     <link rel="stylesheet" href="proyecto.css">
     <link rel="stylesheet" href="modal.css">
@@ -49,11 +50,13 @@
          <a class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
+          <!-- ACA EMPIEZA EL BUSCADOR -->
          <div class="buscador">
              <label for="Buscador">
              <input type="text" name="Buscador" value="" placeholder="Buscar" id="Buscador">
              <button id="botonBuscar" type="submit" name="button"> <img id= "lupa" src="https://imageog.flaticon.com/icons/png/512/25/25313.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt=""> </button>
              </label>
+             <!-- GENEROS -->
             <label for="genero" class="genero">
             </label>
           </div>
@@ -63,6 +66,7 @@
               <!-- no se ponen los géneros porque lo hace automaticamente la API -->
             </select>
          </div>
+         <!-- BOTON PARA CUANNDO TOCAS EL INICIAR SESIÓN APAREZCA UN MODAL PARA COMPLETAR -->
          <div class="usuario card">
             <label for="usuario">
              <a href="#" class="botonUsuario modal-opener waves-effect" type="button" name="button"> Iniciar sesión </a>
@@ -78,10 +82,12 @@
 
      </div>
    </main>
+   <!-- TRAILER -->
     <div>
       <iframe class="trailer"width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     </div>
+    <!-- VER RECOMENDACIONES -->
      <div class="BotonVerRecomendaciones">
        <!-- boton sacado de uikit -->
       <button class="uk-button uk-button-secondary uk-width-1-1 VerRecomendaciones" style="margin-top: 35px">Ver Recomendaciones</button>
@@ -98,13 +104,15 @@
 </div>
       </div>
      </div>
+     <!-- FOOTER -->
     <footer class ="footer">
       <div class ="logoReferencia">
+        <!-- CUANDO TOCAS LA IMAGEN DE TMDB TE MANDA A SU PÁGINA -->
         <img class="tmdb" src="https://www.themoviedb.org/assets/2/v4/logos/312x276-primary-green-74212f6247252a023be0f02a5a45794925c3689117da9d20ffe47742a665c518.png" alt="">
-
       </div>
       <div class="scrollUP">
         <!-- sacado de uikit -->
+        <!-- CUANDO TOCAS EL GO TO TOP TE MANDA HACIA ARRIBA -->
       <a class="uk-button uk-button-primary" href="#target" uk-scroll>Go to top</a>
       </div>
        <div class="nosotras">
