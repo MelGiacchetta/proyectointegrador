@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
 
-  idPelicula = new URLSearchParams(location.search).get("idPelicula")
+  idPelicula = new URLSearchParams(location.search).get("idFavoritas")
 
   // INICIO BLOQUE 1 - Leer el array de storage
 

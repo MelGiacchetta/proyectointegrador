@@ -1,4 +1,5 @@
-window.addEventListener("load", function() {
+
+ window.addEventListener("load", function() {
   var url_string = window.location.href ; //window.location.href
   var url = new URL(url_string);
   var idGenSel = url.searchParams.get("idGenero");

@@ -19,7 +19,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     imagenpelis.innerHTML= '<img src="'+ img +'" alt="">'
     var contenedorpelis= document.querySelector("div.contenedorpelis");
     var detalle= datos.overview;
-    var titulo =datos.title;
+    var titulo = datos.title;
     var arrayDeGeneros= datos.genres;
     var generos=""
     // usamos un for para recorrer el array
@@ -28,7 +28,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
-    contenedorpelis.innerHTML= '<p class="tituloPeli">' + datos.title + '</p>' + '<p>' + datos.overview + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + datos.original_language + '</p>' +'<p>' + "Estreno: " + datos.release_date+ '</p>' ;
+    contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" uk-icon="star" class="estiloEstrella"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
 
   })
   .catch(function(error){
