@@ -7,6 +7,9 @@ window.addEventListener("load", function() {
     // el mensaje de bienvenido al usuario logueado
     document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + sessionStorage.getItem("usuario") + "!</p> </div>"
   }
+  else {
+    document.querySelector(".pelispreferidas").style.display = "none"
+  }
 
 
 })
@@ -17,7 +20,7 @@ function procesarLogin(evento) {
   var nombre = document.querySelector(".campoNombre").value
   var email = document.querySelector(".campoEmail").value
 
-  if (nombre.length <=4) {
+  if (nombre.length <4) {
     // mensaje de error de longitud de nombre
     UIkit.notification({message: 'Error. El nombre debe tener al menos tres caracteres', status: 'danger'})
   }
