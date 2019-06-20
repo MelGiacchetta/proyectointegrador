@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 main{
   overflow: hidden;
 }
@@ -27,4 +30,36 @@ main{
 }
 .estrella uk-icon{
   margin-left: 245px;
+}
+/* PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  div.imagenpelis img {
+  max-width: 140%;
+  }
+  main{
+    overflow: hidden;
+  }
+  div.contenedorpelis {
+    position: absolute;
+    margin-left: 240px;
+  }
+  div.contenedorpelis p {
+    width: 84%;
+    font-size: 12px;
+  }
+  iframe.trailer {
+    position: relative;
+    top: 218px;
+    left: -269px;
+  }
+  div.contenedorpelis p.tituloPeli {
+    font-size: 25px;
+  }
+  .uk-button {
+    margin-top: 189px;
+  }
+  div.BotonVerRecomendaciones {
+    position: relative;
+    top: 193px;
+  }
 }
