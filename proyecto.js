@@ -83,25 +83,25 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
               }
               console.log(document.querySelector(".populares").innerHTML);
             })
-}
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction(){
-  var x = document.querySelector("#myLinks")
-  var header = document.querySelector(".topnav")
-  console.log(x);
-  console.log(header);
-  x.style.display = "block"
-  header.style.display = "block"
-  }
 
-  /*document.querySelector("a.icon").onclick = function(e){
-    var x = document.querySelector("#myLinks")
-    var header = document.querySelector(".topnav")
-    console.log(x);
-    console.log(header);
-    x.style.display = "block"
-    header.style.display = "block"
-    }*/
+}
+// Esto era del boton para la media query de celular pero lo sacamos
+// function myFunction(){
+//  var x = document.querySelector(".mobile")
+//  var header = document.querySelector(".topnav")
+//  console.log(x);
+//  console.log(header);
+//  x.style.display = "block"
+//  header.style.display = "block"
+//  }
+  //document.querySelector(".icon").onclick = function(e){
+  //  var x = document.querySelector("#myLinks")
+  //  var header = document.querySelector(".topnav")
+  //  console.log(x);
+  //  console.log(header);
+  //  x.style.display = "block"
+  //  header.style.display = "block"
+  //  }
 
 
 

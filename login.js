@@ -22,7 +22,7 @@ function procesarLogin(evento) {
 
   if (nombre.length <4) {
     // mensaje de error de longitud de nombre
-    UIkit.notification({message: 'Error. El nombre debe tener al menos tres caracteres', status: 'danger'})
+    UIkit.notification({message: 'Error. El nombre debe tener más de tres caracteres', status: 'danger'})
   }
 
   if (validateEmail(email) == false) {
