@@ -34,5 +34,4 @@ window.addEventListener("load", function(){
     .catch(function(error) {
       console.log("the error was: " + error);
     })
-
 })
