@@ -85,19 +85,46 @@ window.onload = function() { // capturamos el boton buscar y cuando se haga clic
             })
 }
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction(e){
-  var x = document.querySelector("#myLinks");
+function myFunction(){
+  var x = document.querySelector("#myLinks")
   var header = document.querySelector(".topnav")
   console.log(x);
   console.log(header);
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  x.style.display = "block"
+  header.style.display = "block"
+  }
+
+  /*document.querySelector("a.icon").onclick = function(e){
+    var x = document.querySelector("#myLinks")
+    var header = document.querySelector(".topnav")
+    console.log(x);
+    console.log(header);
+    x.style.display = "block"
+    header.style.display = "block"
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*if (x.style.display == "block") {
+    x.style.display = "block";
     // header.style.height= "85px"
     // header.style.position="relative"
   } else {
     x.style.display = "block";
     // header.style.height= "190px"
     // header.style.position="absolute"
-  }
-}
+  }*/
 //peliculas Preferidas

@@ -193,7 +193,21 @@ div.mobile{
 }
 /* PARA TABLETS */
 @media only screen and (max-width: 768px) {
-
+#botonBuscar {
+    width: 58px;
+    height: 44px;
+}
+div.Bienvenido {
+  margin-left: 29px;
+  font-size: 27px;
+}
+div.pelispreferidas {
+  margin-left: 78px;
+  font-size: 20px;
+}
+select.generos {
+  font-size: 16px;
+  margin-left: 400px;
 }
 /* PARA CELULAR */
 @media only screen and (max-width: 600px) {
@@ -203,14 +217,14 @@ div.mobile{
 
   /* Style the navigation menu */
 .topnav {
-  *overflow: hidden;
+  overflow: hidden;
   background-color: rgb(0, 0, 0, 0.7);
   position: relative;
   height: 100px;
 
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
+/*Hide the links inside the navigation menu (except for logo/home)*/
 .topnav #myLinks {
   display: none;
 }
@@ -256,9 +270,7 @@ position: absolute;
 margin-top: 0px;
 margin-left: 22%;
 font-size: 20px;
-
-
 }
-.pelispreferidas, .buscador, .select, .usuario, .registro  {
+.pelispreferidas, .buscador, .select, .usuario {
   display: none;
 }
