@@ -1,23 +1,38 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function(){
 
-  var url_string = window.location.href ; //window.location.href
-  var url = new URL(url_string);
-  var idResultados = url.searchParams.get("Buscador");
-console.log(idResultados);
+  var urlSearchParams = new URLSearchParams(window.location.search)
+  var idResultados = urlSearchParams.get('Buscador')
+  console.log(idResultados);
 
-  fetch("https://api.themoviedb.org/3/search/movie?api_key=ccaee37d8fbe5010cfb857e26fcce8d4&language=en-US&query=resultados&page=1&include_adult=false" + idResultados)
-    .then(function(respuesta) {
-      return respuesta.json()
+  var API_KEY = "ccaee37d8fbe5010cfb857e26fcce8d4"
+  var url = "https://api.themoviedb.org/3/search/movie?api_key="+ API_KEY +"&language=en-US&query="+ idResultados +"&page=1&include_adult=false"
+  fetch(url)
+    .then(function(response){
+      return response.json();
     })
-    .then(function(datos) {
-      console.log(datos);
-      var resultados = datos.results
-      console.log(resultados);
-      // despues de la img va siempre esa url
-      for (var i = 0; i < resultados.length; i++) {
-        document.querySelector(".busqueda").innerHTML += '<li><a href="resultados.html?Buscador='+ resultados[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + resultados[i].poster_path + '"alt=""> <div class="uk-position-center uk-panel"></div></li>'
+    .then(function(objetoLiteralResultados) {
+      console.log(objetoLiteralResultados);
+      //GUARDO EL ARRAY DE PELIS
+      var arrayDePeliculas = objetoLiteralResultados.results
+      // CAPTURO EL UL
+      var ul = document.querySelector('.busqueda')
+
+      var li = ""
+      // PARTE FIJA DE LA URL DE LA IMAGEN
+      var urlImg = "https://image.tmdb.org/t/p/original"
+      // RECORRO EL ARRAY DE PELIS
+      for (var i = 0; i < arrayDePeliculas.length; i++) {
+          li = "<li>"
+          li += "<a href='detalle.html?idDePelicula="+arrayDePeliculas[i].id+"'>"
+          li += "<img src='"+urlImg + arrayDePeliculas[i].poster_path+"'>"
+          li += "</a>"
+          li += "</li>"
+
+          ul.innerHTML += li
       }
-      console.log(document.querySelector(".busqueda").innerHTML);
+    })
+    .catch(function(error) {
+      console.log("the error was: " + error);
     })
 
 })

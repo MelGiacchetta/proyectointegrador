@@ -125,6 +125,7 @@ a.botonUsuario{
   /*estilo a mas populares, proximamente y mejor puntuadas*/
   font-size: 25px;
   font-family: monospace;
+  margin-top: 30px;
 }
 div.slider ul li img{
   width: 94%;

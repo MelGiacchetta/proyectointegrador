@@ -28,7 +28,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
-    contenedorpelis.innerHTML= '<p class="tituloPeli">' + datos.title + '</p>' + '<p>' + datos.overview + '</p>'+ '<p>' + generos + '</p>' + '<p>' + datos.original_language + '</p>' +'<p>' + datos.release_date+ '</p>' ;
+    contenedorpelis.innerHTML= '<p class="tituloPeli">' + datos.title + '</p>' + '<p>' + datos.overview + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + datos.original_language + '</p>' +'<p>' + "Estreno: " + datos.release_date+ '</p>' ;
 
   })
   .catch(function(error){
@@ -57,13 +57,57 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=cca
 .then(function(datos){
 console.log(datos)
 var recomendaciones = datos.results
+var r= ""
 console.log(recomendaciones);
-for (var i = 0; i < puntaje.length; i++) {
-document.querySelector(".recomendadas").innerHTML+= '<img src="https://image.tmdb.org/t/p/original/' + recomendadas[i].poster_path + '" alt=""> <div class="uk-position-center uk-panel"></div></a></li>' }
+for (var i = 0; i < recomendaciones.length; i++) {
+document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="detalle.html?idDePelicula='+recomendaciones[i].id+'"><img src="https://image.tmdb.org/t/p/original/' + recomendaciones[i].poster_path + '" alt=""></a></li>'
+}})
+.catch(function(){
+  console.log(error)
 })
-.catch(function (error){
-  console.log(error) })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
