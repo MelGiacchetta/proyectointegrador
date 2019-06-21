@@ -201,8 +201,14 @@ a.i, a.p, a.g {
   margin-left: -15%;
 }
 a.botonUsuario {
-  margin-left: -45%;
+  margin-top: -20px;
+  margin-left: -61px;
 }
+iframe.trailer{
+  margin-top: 10px;
+  margin-left: 119px;
+}
+
 div.bienvenido p {
   margin-left: 10%;
   font-size: 23px;
@@ -212,13 +218,14 @@ div.pelispreferidas {
   font-size: 15px;
 }
 div.pelispreferidas p {
-  margin-top: -25px;
+  margin-left: 412px;
+  margin-top: -6px;
 }
 select.generos {
   font-size: 12px;
   margin-left: 72%;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: -22px;
 }
 }
 
