@@ -1,10 +1,12 @@
 window.addEventListener("load", function() {
+console.log("cargaaaaa");
   function mostrarPeliculasFavoritas(){
-  var listaDeFavoritos = JSON.parse (localStorage.getItem("favoritos"))
+  var listaDeFavoritos = JSON.parse (localStorage.getItem("peliculasFavoritas"))
 
   if (listaDeFavoritos == 0) {
    document.querySelector(".sin-peliculas").innerHTML="<h2>No tiene ninguna pelicula favorita</h2>"
-  }else {
+  }
+  else {
 
   document.querySelector(".sin-peliculas").style.display="none"
 
@@ -22,7 +24,7 @@ window.addEventListener("load", function() {
      var arrayDePeliculasPorGeneros= data
      var li
      // for (var i = 0; i < arrayDePeliculasPorGeneros.length; i++) {
-       if(arrayDePeliculasPorGeneros.poster_path!=null){
+       if(arrayDePeliculasPorGeneros.poster_path != null){
        var id = arrayDePeliculasPorGeneros.id
        var titulo = arrayDePeliculasPorGeneros.title
        var imagen = arrayDePeliculasPorGeneros.poster_path
@@ -39,10 +41,10 @@ window.addEventListener("load", function() {
        li+=">"
        li+=titulo
        li+="</a></h2>"
-       li+= '<button id="sacarFavs" onclick= "sacarFavorito('+id+')"> Sacar de favoritas </button> </article>'
+       li+= '<button id="sacarFavs" onclick= "sacarFavorito('+ id +')"> Sacar de favoritas </button> </article>'
 
        // document.querySelector(".contenedor").innerHTML += "<article class='peliculasGeneros'><img class='generos-imagenes' src='https://image.tmdb.org/t/p/original" + imagen + "' alt='img producto'><h2 class='titulo-producto'><a href=detallePelicula.html?id=" + id +  ">" + titulo + "</a></h2></article>"
-       document.querySelector(".contenedor").innerHTML += li
+       document.querySelector(".favoritas").innerHTML += li
 
    // }
      }
