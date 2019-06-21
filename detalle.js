@@ -25,7 +25,11 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var generos=""
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
+<<<<<<< HEAD
        generos += "<a href='paginaGenero.html?idGenero='" + arrayDeGeneros[i].id + ">" + arrayDeGeneros[i].name +'</a>'+ ",";
+=======
+      generos += arrayDeGeneros[i].name+ ", "
+>>>>>>> master
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
@@ -37,6 +41,26 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(error)
   })
 
+<<<<<<< HEAD
+=======
+    // fetch("URLDETALLE" + idPelicula)
+    //   .then(function(data) {
+    //     return data.json()
+    //   })
+    //   .then(function(dataPeli) {
+    //     // HACEN COSAS PARA MOSTRAR EL DETALLE
+    //
+    //     // Inicio bloque 2 - Si la peli ya era favorita que aparezca ya pintada la estrella
+    //     if (favoritas.indexOf(idPelicula) >= 0) {
+    //       PONER LA ESTRELLA YA PINTADA
+    //     }
+    //     // Fin bloque 2
+    //
+    //   })
+
+
+
+>>>>>>> master
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
@@ -72,10 +96,59 @@ document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="deta
 })
 })
 
+<<<<<<< HEAD
 
 
 
 
 
-
+=======
 })
+
+
+var idPelicula = new URLSearchParams(location.search).get("idPelicula")
+
+
+// INICIO BLOQUE 1 - Leer el array de storage
+
+  // Paso 1 - Leo de localStorage
+  var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
+
+  if (jsonFavoritas == null) {
+    var favoritas = []
+  } else {
+    // Paso 2 - Desempaqueto el json
+    var objLit = JSON.parse(jsonFavoritas)
+
+    // Paso 3 - Leo del obj lit, la caracteristica importante
+    var favoritas = objLit.caracteristica;
+  }
+// CIERRA BLOQUE 1
+if (favoritas.indexOf(idPelicula) >= 0) {
+  document.querySelector(".estrellita").style.backgroundColor = "gold"
+}
+
+  // Bloque 3 - Que pasa al clickear en la estrella
+  document.querySelector(".estrellita").onclick = function(e) {
+    e.preventDefault()
+    // Bloque 3 a - Modifico el array
+    if (favoritas.indexOf(idPelicula) >= 0) {
+      // La quito
+      var pos = favoritas.indexOf(idPelicula)
+      favoritas.splice(pos,1)
+      document.querySelector(".estrellita").style.backgroundColor = "white"
+    } else {
+      // La agrego
+      favoritas.push(idPelicula)
+      document.querySelector(".estrellita").style.backgroundColor = "gold"
+    }
+    // Fin bloque 3 a
+>>>>>>> master
+
+    // Bloque 3 b
+            var json = JSON.stringify(favoritas)
+
+            localStorage.setItem("peliculasFavoritas", json)
+          // Fin bloque 3 b
+  }
+  // Fin bloque 3
