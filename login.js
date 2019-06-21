@@ -5,7 +5,6 @@ window.addEventListener("load", function() {
     // al loguearse, el boton de iniciar sesion desaparece
     document.querySelector(".botonUsuario").style.display = "none"
     // el mensaje de bienvenido al usuario logueado
-    document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + sessionStorage.getItem("usuario") + "!</p> </div>"
   }
   else {
     document.querySelector(".pelispreferidas").style.display = "none"
@@ -17,6 +16,7 @@ window.addEventListener("load", function() {
 
 function procesarLogin(evento) {
   evento.preventDefault()
+  // capturo el campo donde el usuario pone su nombre para ver el valor que tiene el string dentro del campo
   var nombre = document.querySelector(".campoNombre").value
   var email = document.querySelector(".campoEmail").value
 
