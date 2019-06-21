@@ -230,17 +230,19 @@ select.generos {
   color: white;
 }
 select.generos {
-  margin-left: -37%;
+  margin-left: 13px;
+  margin-top: -18px;
 }
 #formBuscar {
   padding-top: 20px;
   margin-left: -180px;
 }
 #botonBuscar {
-  margin-left: 0%;
+  margin-left: 300px;
+  margin-top: 0px;
 }
 img.logo {
-  margin-left: 500px;
+  margin-left: 250px;
 }
 a.botonUsuario {
   margin-left: -69%;
@@ -252,6 +254,6 @@ a.botonUsuario {
     margin-left: -195px;
 }
 div.bienvenido p {
-  margin-left: -13%;
+  margin-left: -40px;
 }
 }
