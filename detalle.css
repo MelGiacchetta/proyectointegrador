@@ -62,4 +62,8 @@ main{
     position: relative;
     top: 193px;
   }
+  div.contenedorpelis a.estrellita {
+  position:  relative;
+  margin-top: 100px;
+  }
 }
