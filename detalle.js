@@ -24,11 +24,12 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var generos=""
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
-      generos += arrayDeGeneros[i].name+ ", "
+       generos += '<a href="paginaGenero.html?idGenero=">' + arrayDeGeneros[i].name +'</a>'+ ","
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
-    contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" uk-icon="star" class="estiloEstrella"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
+    contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" uk-icon="star" class="estiloEstrella"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: "+  generos +
+     '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
 
   })
   .catch(function(error){
