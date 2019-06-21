@@ -198,7 +198,7 @@ a.i, a.p, a.g {
   height: 37px;
 }
 #formBuscar {
-  margin-left: -37%;
+  margin-left: -15%;
 }
 a.botonUsuario {
   margin-left: -45%;
@@ -208,12 +208,17 @@ div.bienvenido p {
   font-size: 23px;
 }
 div.pelispreferidas {
-  margin-left: 78px;
-  font-size: 20px;
+  margin-left: 200px;
+  font-size: 15px;
+}
+div.pelispreferidas p {
+  margin-top: -25px;
 }
 select.generos {
   font-size: 12px;
-  margin-left: 61%;
+  margin-left: 72%;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 /* PARA CELULAR */
