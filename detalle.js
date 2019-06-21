@@ -36,20 +36,20 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(error)
   })
 
-    // fetch("URLDETALLE" + idPelicula)
-    //   .then(function(data) {
-    //     return data.json()
-    //   })
-    //   .then(function(dataPeli) {
-    //     // HACEN COSAS PARA MOSTRAR EL DETALLE
-    //
-    //     // Inicio bloque 2 - Si la peli ya era favorita que aparezca ya pintada la estrella
-    //     if (favoritas.indexOf(idPelicula) >= 0) {
-    //       PONER LA ESTRELLA YA PINTADA
-    //     }
-    //     // Fin bloque 2
-    //
-    //   })
+    fetch("URLDETALLE" + idPelicula)
+      .then(function(data) {
+        return data.json()
+      })
+      .then(function(dataPeli) {
+        // HACEN COSAS PARA MOSTRAR EL DETALLE
+
+        // Inicio bloque 2 - Si la peli ya era favorita que aparezca ya pintada la estrella
+        if (favoritas.indexOf(idPelicula) >= 0) {
+          //PONER LA ESTRELLA YA PINTADA
+        }
+        // Fin bloque 2
+
+      })
 
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
@@ -84,17 +84,16 @@ document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="deta
 })
 })
 
-})
-
 var urlParams = new URLSearchParams(window.location.search);
-var idPelicula = urlParams.get('idDePelicula')
+var idPelicula = urlParams.get("idDePelicula")
 console.log(idPelicula)
 // INICIO BLOQUE 1 - Leer el array de storage
 
   // Paso 1 - Leo de localStorage
-  var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
-
-  if (typeof jsonFavoritas == 'null' ||typeof jsonFavoritas== 'undefined' || jsonFavoritas.length == 2) {
+  var jsonFavoritas = localStorage.getItem('peliculasFavoritas');
+  console.log('jsonFavoritas');
+  
+  if (typeof jsonFavoritas == 'null' || typeof jsonFavoritas == 'undefined' || jsonFavoritas.length == 2) {
     console.log("wtf")
     var favoritas = []
   } else {
@@ -104,6 +103,7 @@ console.log(idPelicula)
     // Paso 3 - Leo del obj lit, la caracteristica importante
     var favoritas = objLit.caracteristica;
   }
+
 // CIERRA BLOQUE 1
 if (favoritas.indexOf(idPelicula) >= 0) {
   document.querySelector(".estrellita").style.backgroundColor = "gold"
@@ -126,9 +126,11 @@ if (favoritas.indexOf(idPelicula) >= 0) {
     // Fin bloque 3 a
 
     // Bloque 3 b
-            var json = JSON.stringify(favoritas)
+      var json = JSON.stringify(favoritas)
 
-            localStorage.setItem("peliculasFavoritas", json)
+      localStorage.setItem("peliculasFavoritas", json)
           // Fin bloque 3 b
   }
   // Fin bloque 3
+
+})
