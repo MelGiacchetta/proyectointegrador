@@ -33,8 +33,22 @@ main{
 }
 /* PARA CELULAR */
 @media only screen and (max-width: 600px) {
+  div.bienvenido p {
+    margin-left: -12%;
+  }
+  .pelispreferidas a p{
+    font-size: 14px;
+    padding-top: 28PX;
+      margin-left: 154px;
+      margin-bottom: -8px;
+  }
+  select.generos {
+   margin-top: -11px;
+  }
+
   div.imagenpelis img {
-  max-width: 140%;
+  max-width: 160%;
+  margin-left: -15px;
   }
   main{
     overflow: hidden;
@@ -49,7 +63,7 @@ main{
   }
   iframe.trailer {
     position: relative;
-    top: 218px;
+    top: 400px;
     left: -269px;
   }
   div.contenedorpelis p.tituloPeli {
@@ -60,17 +74,17 @@ main{
   }
   div.BotonVerRecomendaciones {
     position: relative;
-    top: 193px;
+    top: 400px;
   }
   div.contenedorpelis a.estrellita {
   position:  relative;
   margin-top: 100px;
   }
-  div.pelispreferidas {
-    margin-left: 200px;
+  div.pelispreferidas a p {
+    margin-left: 150px;
     font-size: 15px;
+    margin-top: -8px;
   }
-  div.pelispreferidas p {
-    margin-top: -25px;
-  }
+
+
 }
