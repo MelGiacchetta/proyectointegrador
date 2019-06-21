@@ -35,6 +35,7 @@ function procesarLogin(evento) {
      // al loguearse, el boton de iniciar sesion desaparece, es decir, se apreta click en el closer automaticamente
      //el boton de iniciar sesion desaparece al loguearse
      document.querySelector(".botonUsuario").style.display = "none"
+     document.querySelector(".pelispreferidas").style.display = "block"
      // el mensaje de bienvenido al usuario logueado
      document.querySelector(".bienvenido").innerHTML = "<div class= Bienvenido><p>Bienvenido " + nombre + "!</p> </div>"
      sessionStorage.setItem("usuario", nombre)

@@ -1,4 +1,3 @@
-
 window.addEventListener("load",function(){
   var urlImg= "https://image.tmdb.org/t/p/original";
   var urlParams = new URLSearchParams(window.location.search);
