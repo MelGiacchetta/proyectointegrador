@@ -26,7 +26,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
        generos += '<a href="paginaGenero.html?idGenero=' + arrayDeGeneros[i].id +'&nombre='+arrayDeGeneros[i].name+'">' + arrayDeGeneros[i].name +'</a>'+ ",";
-       // lo vinculo para que cuando toco en el genero me mande a las peliculas de ese genero, necesito el id de la pelicula y ademas el nombre= y el nombre del genero 
+       // lo vinculo para que cuando toco en el genero me mande a las peliculas de ese genero, necesito el id de la pelicula y ademas el nombre= y el nombre del genero
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
@@ -51,8 +51,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     //     // Fin bloque 2
     //
     //   })
-
-
 
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
