@@ -3,7 +3,7 @@
   var url_string = window.location.href ; //window.location.href
   var url = new URL(url_string);
   var idGenSel = url.searchParams.get("idGenero");
-
+  console.log(idGenSel)
   var genero = url.searchParams.get("nombre");
   var cambioGenero = document.querySelector(".titulos");
   cambioGenero.innerHTML = genero + ":";
