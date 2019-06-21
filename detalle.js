@@ -13,8 +13,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(datos)
 
     var imagenpelis= document.querySelector("div.imagenpelis");
-    var img = urlImg +
-    datos.poster_path;
+    var img = urlImg + datos.poster_path;
 
     imagenpelis.innerHTML= '<img src="'+ img +'" alt="">'
     var contenedorpelis= document.querySelector("div.contenedorpelis");
@@ -24,7 +23,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var generos=""
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
-      generos += arrayDeGeneros[i].name+ ", "
+       generos += '<a href="paginaGenero.html?idGenero=' + arrayDeGeneros[i].id +'&nombre='+arrayDeGeneros[i].name+'">' + arrayDeGeneros[i].name +'</a>'+ ",";
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
