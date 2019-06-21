@@ -220,6 +220,7 @@ select.generos {
   padding: 10px;
   margin-top: 10px;
 }
+}
 
 /* PARA CELULAR */
 @media only screen and (max-width: 600px) {
@@ -252,4 +253,5 @@ a.botonUsuario {
 }
 div.bienvenido p {
   margin-left: -13%;
+}
 }

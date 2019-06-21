@@ -23,6 +23,7 @@ window.addEventListener("load", function() {
       console.log(peliculas);
 // agarro el ul donde van las peliculas y lo modifico para que me aparezca segun el genero del id
       for (var i = 0; i < peliculas.length; i++) {
+        document.querySelector(".porGenero").innerHTML+= '<li> <a href="detalle.html?idDePelicula='+ peliculas[i].id +'"><img src="https://image.tmdb.org/t/p/original/'+peliculas[i].poster_path+ '"alt=""> <div class="uk-position-center uk-panel"></div></a></li>'
        }
       console.log(document.querySelector(".porGenero").innerHTML);
     })
