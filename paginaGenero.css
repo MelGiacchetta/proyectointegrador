@@ -7,4 +7,11 @@
   margin-left: 170px;
   margin-top: -50px;
 }
+
+}
+/* PARA TABLETS */
+@media only screen and (max-width: 600px)  {
+  .pelispreferidas p {
+    margin-left: -196px;
+  }
 }
