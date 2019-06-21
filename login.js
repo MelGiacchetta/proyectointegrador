@@ -17,6 +17,7 @@ window.addEventListener("load", function() {
 
 function procesarLogin(evento) {
   evento.preventDefault()
+  // capturo el campo donde el usuario pone su nombre para ver el valor que tiene el string dentro del campo
   var nombre = document.querySelector(".campoNombre").value
   var email = document.querySelector(".campoEmail").value
 
