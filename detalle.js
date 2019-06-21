@@ -8,6 +8,7 @@ window.addEventListener("load",function(){
 fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
+    // transformo el string en objeto literal
   })
   .then(function(datos){
     console.log(datos)
@@ -40,6 +41,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
+    // transformo el string en objeto literal
   })
   .then(function(datos){
     console.log(datos)
@@ -54,6 +56,7 @@ document.querySelector(".VerRecomendaciones").addEventListener("click", function
 fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
 .then(function(respuesta){
  return respuesta.json()
+   // transformo el string en objeto literal
 })
 .then(function(datos){
 console.log(datos)
