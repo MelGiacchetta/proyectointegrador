@@ -25,11 +25,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var generos=""
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
-<<<<<<< HEAD
-       generos += "<a href='paginaGenero.html?idGenero='" + arrayDeGeneros[i].id + ">" + arrayDeGeneros[i].name +'</a>'+ ",";
-=======
-      generos += arrayDeGeneros[i].name+ ", "
->>>>>>> master
+       generos += '<a href="paginaGenero.html?idGenero=+ arrayDeGeneros[i].id">' + arrayDeGeneros[i].name +'</a>'+ ",";
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
@@ -41,8 +37,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(error)
   })
 
-<<<<<<< HEAD
-=======
     // fetch("URLDETALLE" + idPelicula)
     //   .then(function(data) {
     //     return data.json()
@@ -60,7 +54,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
 
 
 
->>>>>>> master
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
@@ -96,13 +89,6 @@ document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="deta
 })
 })
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
 })
 
 
@@ -143,7 +129,7 @@ if (favoritas.indexOf(idPelicula) >= 0) {
       document.querySelector(".estrellita").style.backgroundColor = "gold"
     }
     // Fin bloque 3 a
->>>>>>> master
+
 
     // Bloque 3 b
             var json = JSON.stringify(favoritas)
