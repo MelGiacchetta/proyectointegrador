@@ -46,7 +46,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     if (favoritas.indexOf(id) >= 0) {
        document.querySelector(".estrellita").style.color = "gold"
      }
-
+//  Estrellita para que se pinte
     document.querySelector(".estrellita").onclick = function(e) {
       e.preventDefault()
       // Bloque 3 a - Modifico el array
@@ -74,20 +74,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(error)
   })
 
-    fetch("URLDETALLE" + idPelicula)
-      .then(function(data) {
-        return data.json()
-      })
-      .then(function(dataPeli) {
-        // HACEN COSAS PARA MOSTRAR EL DETALLE
-
-        // Inicio bloque 2 - Si la peli ya era favorita que aparezca ya pintada la estrella
-        if (favoritas.indexOf(idPelicula) >= 0) {
-          //PONER LA ESTRELLA YA PINTADA
-        }
-        // Fin bloque 2
-
-      })
 
   //fetch del trailer
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
