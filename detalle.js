@@ -3,6 +3,17 @@ window.addEventListener("load",function(){
   var urlParams = new URLSearchParams(window.location.search);
   var id = urlParams.get('idDePelicula');
 
+  var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
+
+   if (jsonFavoritas == null) {
+     var favoritas = []
+   } else {
+     // Paso 2 - Desempaqueto el json
+     var favoritas = JSON.parse(jsonFavoritas)
+   }
+
+   console.log(favoritas);
+
   console.log("detalle");
    //detalle pelicula proximamente
 fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
@@ -30,6 +41,33 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
     contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" id="pelicula" uk-icon="star" class="estrellita"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
+
+    console.log(favoritas.indexOf(id));
+    if (favoritas.indexOf(id) >= 0) {
+       document.querySelector(".estrellita").style.color = "gold"
+     }
+
+    document.querySelector(".estrellita").onclick = function(e) {
+      e.preventDefault()
+      // Bloque 3 a - Modifico el array
+      if (favoritas.indexOf(id) >= 0) {
+        // La quito
+        var pos = favoritas.indexOf(id)
+        favoritas.splice(pos,1)
+        document.querySelector("svg").style.color = "white"
+      } else {
+        // La agrego
+        favoritas.push(id)
+        document.querySelector("svg").style.color = "gold"
+      }
+      // Fin bloque 3 a
+
+      // Bloque 3 b
+        var json = JSON.stringify(favoritas)
+
+        localStorage.setItem("peliculasFavoritas", json)
+      // Fin bloque 3 b
+    }
 
   })
   .catch(function(error){
@@ -87,50 +125,5 @@ document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="deta
 var urlParams = new URLSearchParams(window.location.search);
 var idPelicula = urlParams.get("idDePelicula")
 console.log(idPelicula)
-// INICIO BLOQUE 1 - Leer el array de storage
-
-  // Paso 1 - Leo de localStorage
-  var jsonFavoritas = localStorage.getItem('peliculasFavoritas');
-  console.log('jsonFavoritas');
-  
-  if (typeof jsonFavoritas == 'null' || typeof jsonFavoritas == 'undefined' || jsonFavoritas.length == 2) {
-    console.log("wtf")
-    var favoritas = []
-  } else {
-    // Paso 2 - Desempaqueto el json
-    var objLit = JSON.parse(jsonFavoritas)
-
-    // Paso 3 - Leo del obj lit, la caracteristica importante
-    var favoritas = objLit.caracteristica;
-  }
-
-// CIERRA BLOQUE 1
-if (favoritas.indexOf(idPelicula) >= 0) {
-  document.querySelector(".estrellita").style.backgroundColor = "gold"
-}
-
-  // Bloque 3 - Que pasa al clickear en la estrella
-  document.querySelector(".estrellita").onclick = function (e) {
-    e.preventDefault()
-    // Bloque 3 a - Modifico el array
-    if (favoritas.indexOf(idPelicula) >= 0) {
-      // La quito
-      var pos = favoritas.indexOf(idPelicula)
-      favoritas.splice(pos,1)
-      document.querySelector(".estrellita").style.backgroundColor = "white"
-    } else {
-      // La agrego
-      favoritas.push(idPelicula)
-      document.querySelector(".estrellita").style.backgroundColor = "gold"
-    }
-    // Fin bloque 3 a
-
-    // Bloque 3 b
-      var json = JSON.stringify(favoritas)
-
-      localStorage.setItem("peliculasFavoritas", json)
-          // Fin bloque 3 b
-  }
-  // Fin bloque 3
 
 })
