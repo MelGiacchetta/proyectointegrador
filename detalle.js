@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function(){
   var urlImg= "https://image.tmdb.org/t/p/original";
   var urlParams = new URLSearchParams(window.location.search);
@@ -13,7 +14,8 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(datos)
 
     var imagenpelis= document.querySelector("div.imagenpelis");
-    var img = urlImg + datos.poster_path;
+    var img = urlImg +
+    datos.poster_path;
 
     imagenpelis.innerHTML= '<img src="'+ img +'" alt="">'
     var contenedorpelis= document.querySelector("div.contenedorpelis");
@@ -87,16 +89,16 @@ document.querySelector(".peliculasRecomendadas").innerHTML+= '<li ><a href="deta
 
 })
 
-
-var idPelicula = new URLSearchParams(location.search).get("idPelicula")
-
-
+var urlParams = new URLSearchParams(window.location.search);
+var idPelicula = urlParams.get('idDePelicula')
+console.log(idPelicula)
 // INICIO BLOQUE 1 - Leer el array de storage
 
   // Paso 1 - Leo de localStorage
   var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
 
-  if (jsonFavoritas == null) {
+  if (typeof jsonFavoritas == 'null' ||typeof jsonFavoritas== 'undefined' || jsonFavoritas.length == 2) {
+    console.log("wtf")
     var favoritas = []
   } else {
     // Paso 2 - Desempaqueto el json
@@ -111,7 +113,7 @@ if (favoritas.indexOf(idPelicula) >= 0) {
 }
 
   // Bloque 3 - Que pasa al clickear en la estrella
-  document.querySelector(".estrellita").onclick = function(e) {
+  document.querySelector(".estrellita").onclick = function (e) {
     e.preventDefault()
     // Bloque 3 a - Modifico el array
     if (favoritas.indexOf(idPelicula) >= 0) {
