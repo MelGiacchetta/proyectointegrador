@@ -201,8 +201,14 @@ a.i, a.p, a.g {
   margin-left: -15%;
 }
 a.botonUsuario {
-  margin-left: -45%;
+  margin-top: -20px;
+  margin-left: -61px;
 }
+iframe.trailer{
+  margin-top: 10px;
+  margin-left: 119px;
+}
+
 div.bienvenido p {
   margin-left: 10%;
   font-size: 23px;
@@ -212,13 +218,14 @@ div.pelispreferidas {
   font-size: 15px;
 }
 div.pelispreferidas p {
-  margin-top: -25px;
+  margin-left: 412px;
+  margin-top: -6px;
 }
 select.generos {
   font-size: 12px;
   margin-left: 72%;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: -22px;
 }
 }
 
@@ -230,16 +237,18 @@ select.generos {
   color: white;
 }
 select.generos {
-  margin-left: 13px;
-  margin-top: -18px;
+  margin-left: -301px;
+  margin-top: 15px;
 }
 #formBuscar {
   padding-top: 20px;
   margin-left: -180px;
 }
+
 #botonBuscar {
-  margin-left: 300px;
+  margin-left: 354px;
   margin-top: 0px;
+
 }
 img.logo {
   margin-left: 250px;
@@ -248,12 +257,12 @@ a.botonUsuario {
   margin-left: -69%;
   margin-top: -55%;
 }
-.pelispreferidas p{
-  font-size: 14px;
-  padding-top: 28PX;
-    margin-left: -195px;
+.pelispreferidas a p{
+  margin-left: 245px;
+  margin-top: -43px;
 }
 div.bienvenido p {
-  margin-left: -40px;
+  margin-left: -45px;
+  margin-top: -15px;
 }
 }
