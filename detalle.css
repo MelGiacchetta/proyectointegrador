@@ -47,15 +47,17 @@ main{
   }
 
   div.imagenpelis img {
-  max-width: 160%;
-  margin-left: -15px;
+  max-width: 100%;
+  margin-left: -17px;
   }
   main{
     overflow: hidden;
   }
   div.contenedorpelis {
     position: absolute;
-    margin-left: 240px;
+    /* margin-left: 240px; */
+    margin-left: 184px;
+    margin-top: 49px;
   }
   div.contenedorpelis p {
     width: 84%;
@@ -63,8 +65,11 @@ main{
   }
   iframe.trailer {
     position: relative;
-    top: 400px;
-    left: -269px;
+    top: 28px;
+    left: -130px;
+  }
+  button.VerRecomendaciones{
+    top: 100px;
   }
   div.contenedorpelis p.tituloPeli {
     font-size: 25px;
