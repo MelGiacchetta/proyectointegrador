@@ -230,16 +230,18 @@ select.generos {
   color: white;
 }
 select.generos {
-  margin-left: 13px;
-  margin-top: -18px;
+  margin-left: -301px;
+  margin-top: 15px;
 }
 #formBuscar {
   padding-top: 20px;
   margin-left: -180px;
 }
+
 #botonBuscar {
-  margin-left: 300px;
+  margin-left: 354px;
   margin-top: 0px;
+
 }
 img.logo {
   margin-left: 250px;
@@ -248,12 +250,12 @@ a.botonUsuario {
   margin-left: -69%;
   margin-top: -55%;
 }
-.pelispreferidas p{
-  font-size: 14px;
-  padding-top: 28PX;
-    margin-left: -195px;
+.pelispreferidas a p{
+  margin-left: 245px;
+  margin-top: -43px;
 }
 div.bienvenido p {
-  margin-left: -40px;
+  margin-left: -45px;
+  margin-top: -15px;
 }
 }
