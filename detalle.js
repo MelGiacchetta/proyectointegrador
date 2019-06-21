@@ -8,7 +8,6 @@ window.addEventListener("load",function(){
 fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
-    // transformo el string en objeto literal
   })
   .then(function(datos){
     console.log(datos)
@@ -25,12 +24,11 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var generos=""
     // usamos un for para recorrer el array
     for (var i = 0; i < arrayDeGeneros.length; i++) {
-       generos += '<a href="paginaGenero.html?idGenero=+ arrayDeGeneros[i].id">' + arrayDeGeneros[i].name +'</a>'+ ",";
+      generos += arrayDeGeneros[i].name+ ", "
     }
     var lenguajeOriginal= datos.original_language;
     var estreno= datos.release_date;
-    contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" uk-icon="star" class="estiloEstrella"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: "+  generos +
-     '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
+    contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" id="pelicula" uk-icon="star" class="estrellita"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
 
   })
   .catch(function(error){
@@ -58,7 +56,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
   fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
-    // transformo el string en objeto literal
   })
   .then(function(datos){
     console.log(datos)
@@ -73,7 +70,6 @@ document.querySelector(".VerRecomendaciones").addEventListener("click", function
 fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
 .then(function(respuesta){
  return respuesta.json()
-   // transformo el string en objeto literal
 })
 .then(function(datos){
 console.log(datos)
@@ -129,7 +125,6 @@ if (favoritas.indexOf(idPelicula) >= 0) {
       document.querySelector(".estrellita").style.backgroundColor = "gold"
     }
     // Fin bloque 3 a
-
 
     // Bloque 3 b
             var json = JSON.stringify(favoritas)
