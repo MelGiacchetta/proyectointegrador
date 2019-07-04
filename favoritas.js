@@ -37,9 +37,9 @@ console.log("cargaaaaa");
        li+= "' alt='img producto'>"
        li+= "<h2 class='titulo-producto'>"
        li+= "<a href=detallePelicula.html?id="
-       li+=id
+       li+= id
        li+=">"
-       li+=titulo
+       li+= titulo
        li+="</a></h2>"
        li+= '<button id="sacarFavs" onclick= "sacarFavorito('+ id +')"> Sacar de favoritas </button> </article>'
 

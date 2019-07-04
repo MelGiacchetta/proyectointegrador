@@ -5,7 +5,7 @@ window.addEventListener("load", function() {
   var url = new URL(url_string);
   var idGenSel = url.searchParams.get("idGenero");
 
-  //para reemplazar el titulo de genero por el nombre del genero
+  //para reemplazar el titulo de genero por el nombre del genero, agarro el nombre del genero en la url y lo pongo en el titulo
   console.log(idGenSel)
   var genero = url.searchParams.get("nombre");
   var cambioGenero = document.querySelector(".titulos");

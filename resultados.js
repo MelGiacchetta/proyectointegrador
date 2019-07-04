@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
     })
     .then(function(objetoLiteralResultados) {
       console.log(objetoLiteralResultados);
-      //GUARDO EL ARRAY DE PELIS
+      // GUARDO EL ARRAY DE PELIS
       var arrayDePeliculas = objetoLiteralResultados.results
       // CAPTURO EL UL
       var ul = document.querySelector('.busqueda')

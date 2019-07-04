@@ -13,8 +13,11 @@ window.addEventListener("load", function() {
      }
    })
 
+//onchange es como onclick pero en select (cuando se cambia la opcion elegida)
   document.querySelector("select.generos").onchange = function() {
+    //agarro el valor (id) de la opcion que se selecciono
     var opcion = this.options[this.selectedIndex].value;
+    //aca agarro el texto (su nombre)
     var nombreOpcion = this.options[this.selectedIndex].text;
     location.href = "paginaGenero.html?idGenero=" + opcion +  "&nombre=" + nombreOpcion
   }

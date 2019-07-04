@@ -5,10 +5,11 @@ window.addEventListener("load",function(){
 
   var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
 
+
    if (jsonFavoritas == null) {
      var favoritas = []
    } else {
-     // Paso 2 - Desempaqueto el json
+     // Paso 2 - Desempaqueto el json, si tiene lo convierte en objeto literal
      var favoritas = JSON.parse(jsonFavoritas)
    }
 
@@ -16,7 +17,7 @@ window.addEventListener("load",function(){
 
   console.log("detalle");
    //detalle pelicula proximamente
-fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
+fetch("https://api.themoviedb.org/3/movie/"+ id +"?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
   .then(function(respuesta){
     return respuesta.json();
   })
@@ -24,8 +25,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(datos)
 
     var imagenpelis= document.querySelector("div.imagenpelis");
-    var img = urlImg +
-    datos.poster_path;
+    var img = urlImg + datos.poster_path;
 
     imagenpelis.innerHTML= '<img src="'+ img +'" alt="">'
     var contenedorpelis= document.querySelector("div.contenedorpelis");
@@ -42,12 +42,14 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     var estreno= datos.release_date;
     contenedorpelis.innerHTML= '<p class="tituloPeli">' + titulo + '<a href="" id="pelicula" uk-icon="star" class="estrellita"></a></p>' + '<p>' + detalle + '</p>'+ '<p>'+ "Géneros: " + generos + '</p>' + '<p>'+ "Lenguaje: " + lenguajeOriginal + '</p>' +'<p>' + "Estreno: " + estreno + '</p>' ;
 
+//FAVORITAS
     console.log(favoritas.indexOf(id));
     if (favoritas.indexOf(id) >= 0) {
        document.querySelector(".estrellita").style.color = "gold"
      }
 //  Estrellita para que se pinte
     document.querySelector(".estrellita").onclick = function(e) {
+      //para que no se recargue la pagina una vez que haces click:
       e.preventDefault()
       // Bloque 3 a - Modifico el array
       if (favoritas.indexOf(id) >= 0) {
@@ -89,6 +91,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=ccaee37d8fbe5010cfb857e
     console.log(error)
   })
 
+//recomendaciones
 document.querySelector(".VerRecomendaciones").addEventListener("click", function(){
 fetch("https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=ccaee37d8fbe5010cfb857e26fcce8d4")
 .then(function(respuesta){
